@@ -1,0 +1,26 @@
+aside{
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-left: 10px;
+    padding: 0;
+    gap: 10px;
+    text-align: center;
+
+}
+
+.calendar{
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #202020;
+}
+
+.next-events{
+    width: 250px;
+    height: 400px;
+    border-radius: 20px;
+    background-color: #202020;
+}

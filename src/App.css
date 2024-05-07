@@ -1,16 +1,26 @@
+
+
 #root {
   width: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
+  overflow-x: hidden;
 }
+
+
 
 #topMenu {
   width: 100%;
   padding: .5rem;
   background-color: rgb(156, 13, 13);
   max-height: 3rem;
-  margin: 0;
+  margin-bottom: 20px;
+  
+}
+
+body{
+  display: flex;
+  justify-content: space-between;
 }
 
 #topMenu ul { 
@@ -63,4 +73,11 @@ li a:hover{
 
 #profileIcon:hover {
   fill: black;
+}
+
+main{
+  width: 900px;
+  height: 86.5vh;
+  background-color: #202020;
+  border-radius: 20px;
 }

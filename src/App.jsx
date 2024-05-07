@@ -1,4 +1,5 @@
-
+import {AsideRight} from './aside-right.jsx'
+import {AsideLeft} from './aside-left.jsx'
 import './App.css'
 
 function App() {
@@ -21,6 +22,17 @@ function App() {
           </li>
         </ul>
       </header>
+      
+      <body>
+        <AsideLeft />
+        <main>
+          
+        </main>
+      <AsideRight />
+
+      </body>
+
+
     </>
   )
 }
