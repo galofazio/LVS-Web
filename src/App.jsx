@@ -1,8 +1,18 @@
+import { useState } from 'react';
 import {AsideRight} from './aside-right.jsx'
 import {AsideLeft} from './aside-left.jsx'
 import './App.css'
+import { Login } from './login.jsx'
+import { Register } from './register.jsx';
 
 function App() {
+
+  const [mostrarLogin, setMostrarLogin] = useState(true);
+
+  const toggleComponent = () => {
+    setMostrarLogin(!mostrarLogin);
+  };
+
 
   return (
     <>
@@ -25,8 +35,8 @@ function App() {
       
       <body>
         <AsideLeft />
-        <main>
-          
+        <main id='main'>
+        {mostrarLogin ? <Login onToggleComponent={toggleComponent} /> : <Register />}
         </main>
       <AsideRight />
 

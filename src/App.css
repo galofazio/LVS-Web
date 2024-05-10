@@ -38,9 +38,11 @@ li {
   display: flex;
 }
 
+
 #logoTopMenu {
   height: 3rem;
 }
+
 
 #doubleLink {
   gap: 20px;
@@ -55,6 +57,7 @@ li a {
 
 li a:hover{
   color: rgb(17, 17, 17);
+  cursor: pointer;
 }
 
 .w-6 {
@@ -73,11 +76,16 @@ li a:hover{
 
 #profileIcon:hover {
   fill: black;
+  cursor: pointer;
 }
 
-main{
+
+#main{
+  display: flex;
+  flex-direction: column;
   width: 900px;
   height: 86.5vh;
   background-color: #202020;
   border-radius: 20px;
 }
+

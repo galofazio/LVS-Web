@@ -1,0 +1,52 @@
+#container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; padding-top: 105px;
+}
+
+
+.loginInputs {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.loginInputs input {
+    border-radius: 8px;
+    background-color: #151515;
+    height: 20px;
+    text-align: center;
+    border:1px inset rgb(92, 91, 91);
+    
+}
+
+#registerLink {
+    margin-top: 25px;
+    transition: color 0.3s;
+}
+
+#registerLink:hover {
+    color: rgb(156, 13, 13);
+    cursor: pointer;
+}
+
+#sendButton {
+    background-color: rgb(156, 13, 13);
+    width: 15%;
+    margin-top: 3rem;
+    border-radius: 8px;
+    border: none;
+    transition: color 0.3s;
+    
+}
+
+#sendButton:hover {
+    color: black;
+    cursor: pointer;
+}
+
+
+
+
