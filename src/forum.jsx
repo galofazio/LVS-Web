@@ -7,7 +7,7 @@ export function Forum() {
     return (
 
         <>
-            <h3>FORUM</h3>    
+            <h3>FORUM</h3>
         </>
     )
 }

@@ -3,36 +3,41 @@ import './register.css'
 export function Register() {
 
 
-    return(
+    return (
         <>
             <div id='container'>
-                <h2>Register</h2>
+                <h2>Registro</h2>
 
                 <div className="registerInputs">
-                    <h3>Name</h3>
-                    <input></input>
+                    <h3>Nombre</h3>
+                    <input required></input>
                 </div>
 
                 <div className="registerInputs">
-                    <h3>Lastname</h3>
-                    <input></input>
+                    <h3>Apellido</h3>
+                    <input required></input>
                 </div>
 
                 <div className="registerInputs">
-                    <h3>Email</h3>
-                    <input></input>
+                    <h3>Nombre de usuario</h3>
+                    <input required></input>
                 </div>
 
                 <div className="registerInputs">
-                    <h3>Password</h3>
-                    <input></input>
+                    <h3>Correo</h3>
+                    <input required></input>
                 </div>
-                <button id='sendButton'>Send</button>
+
+                <div className="registerInputs">
+                    <h3>Contraseña</h3>
+                    <input type='password' required></input>
+                </div>
+                <button id='sendButton'>Enviar</button>
 
             </div>
-        
-        
-        
+
+
+
         </>
     )
 }

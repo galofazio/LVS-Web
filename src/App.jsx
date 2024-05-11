@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import {AsideRight} from './aside-right.jsx'
-import {AsideLeft} from './aside-left.jsx'
+import { AsideRight } from './aside-right.jsx'
+import { AsideLeft } from './aside-left.jsx'
 import './App.css'
 import { Login } from './login.jsx'
 import { Register } from './register.jsx'
@@ -15,39 +15,39 @@ function App() {
   const [viewForum, setViewForum] = useState(true)
 
   const toggleComponent = () => {
-      if(viewForum == true){
-        setViewForum(false)
-        setViewTournaments(true)
-      } else {
-        setViewForum(true)
-        setViewTournaments(false)
-      }
+    if (viewForum == true) {
+      setViewForum(false)
+      setViewTournaments(true)
+    } else {
+      setViewForum(true)
+      setViewTournaments(false)
+    }
   }
 
   const toggleLogin = () => {
-    if(viewLogin == false){
-     if(viewRegister == true){
-       setViewForum(true)
-       setViewRegister(false)
-     } else {
-      setViewLogin(true)
-      setViewForum(false)
-     }
-     setViewTournaments(false)
-     } else {
-     setViewLogin(false)
-     setViewTournaments(false)
-     setViewForum(true)
-   }
-}
+    if (viewLogin == false) {
+      if (viewRegister == true) {
+        setViewForum(true)
+        setViewRegister(false)
+      } else {
+        setViewLogin(true)
+        setViewForum(false)
+      }
+      setViewTournaments(false)
+    } else {
+      setViewLogin(false)
+      setViewTournaments(false)
+      setViewForum(true)
+    }
+  }
 
-const toggleRegister = () => {
+  const toggleRegister = () => {
     setViewLogin(false)
     setViewRegister(true)
-}
+  }
 
 
-  
+
 
 
   return (
@@ -55,11 +55,11 @@ const toggleRegister = () => {
       <header id="topMenu">
         <ul>
           <li>
-            <img id="logoTopMenu" src="/LVS.png" alt="logo"/>
+            <img id="logoTopMenu" src="/LVS.png" alt="logo" />
           </li>
           <li id="doubleLink">
-              <a onClick={viewForum === false ? toggleComponent : null} >FORO</a>
-              <a onClick={viewTournaments === false ? toggleComponent : null} >TORNEOS</a>
+            <a onClick={viewForum === true || viewLogin === true || viewRegister === true ? null : toggleComponent} >FORO</a>
+            <a onClick={viewTournaments === true || viewLogin === true || viewRegister === true ? null : toggleComponent} >TORNEOS</a>
           </li>
           <li>
             <svg onClick={toggleLogin} id="profileIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -68,16 +68,17 @@ const toggleRegister = () => {
           </li>
         </ul>
       </header>
-      
+
       <body>
         <AsideLeft />
         <main id='main'>
-          {viewForum ? <Forum/> : <></>}
-          {viewTournaments ? <Tournaments/> : <></>}
-          {viewLogin ? <Login toggleRegister={toggleRegister}/> : <></>}
-          {viewRegister ? <Register/> : <></>}
+          {viewForum ? <Forum /> : <></>}
+          {viewTournaments ? <Tournaments /> : <></>}
+          {/* toggleRegister envia la funcion toggleRegister al componente Login */}
+          {viewLogin ? <Login toggleRegister={toggleRegister} /> : <></>}
+          {viewRegister ? <Register /> : <></>}
         </main>
-      <AsideRight />
+        <AsideRight />
 
       </body>
 

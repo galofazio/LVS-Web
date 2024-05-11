@@ -1,27 +1,27 @@
 import './login.css'
 import PropTypes from 'prop-types';
 
-
-export function Login({ toggleRegister}){
+/* recibe la funcion toggleRegister */
+export function Login({ toggleRegister }) {
 
     return (
         <>
             <div id='container'>
-                <h2>Login</h2>
+                <h2>Inicio de Sesion</h2>
 
                 <div className="loginInputs">
-                    <h3>Email</h3>
+                    <h3>Correo</h3>
                     <input></input>
                 </div>
 
                 <div className="loginInputs">
-                    <h3>Password</h3>
+                    <h3>Contraseña</h3>
                     <input></input>
                 </div>
-                <button id='sendButton'>Send</button>
+                <button id='sendButton'>Enviar</button>
 
-
-                <a onClick={toggleRegister} id='registerLink'>Register</a>
+                {/* utiliza la funcion que recibio de App */}
+                <a onClick={toggleRegister} id='registerLink'>Registro</a>
             </div>
 
         </>
@@ -30,5 +30,5 @@ export function Login({ toggleRegister}){
 
 Login.propTypes = {
     toggleRegister: PropTypes.func.isRequired,
-  };
+};
 

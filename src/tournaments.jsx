@@ -4,7 +4,7 @@ export function Tournaments() {
 
 
 
-    return(
+    return (
 
 
         <>
