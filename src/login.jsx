@@ -1,7 +1,8 @@
 import './login.css'
 import PropTypes from 'prop-types';
 
-export function Login({ onToggleComponent }){
+
+export function Login({ toggleRegister}){
 
     return (
         <>
@@ -20,7 +21,7 @@ export function Login({ onToggleComponent }){
                 <button id='sendButton'>Send</button>
 
 
-                <a onClick={onToggleComponent} id='registerLink'>Register</a>
+                <a onClick={toggleRegister} id='registerLink'>Register</a>
             </div>
 
         </>
@@ -28,5 +29,6 @@ export function Login({ onToggleComponent }){
 }
 
 Login.propTypes = {
-    onToggleComponent: PropTypes.func.isRequired,
+    toggleRegister: PropTypes.func.isRequired,
   };
+
